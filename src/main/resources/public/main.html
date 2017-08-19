@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+</head>
+<body ng-app="springDemo">
+<h1>Main</h1>
+<div class="container" ng-controller="AppCtrl">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="page-header">Сайты</div>
+            <div class="panel-body">
+                <table class="table">
+                    <tr>
+                        <th>
+                            icon
+                        </th>
+                        <th>
+                            id
+                        </th>
+                        <th>site</th>
+                        <th>title</th>
+                        <th>description</th>
+                    </tr>
+                    <tr ng-repeat="item in websites">
+                            <td><img width="50" height="50" ng-src="{{item.iconImageUrl}}"></td>
+                        <td>{{item.id}}</td>
+                        <td>{{item.site}}</td>
+                        <td>{{item.title}}</td>
+                        <td>{{item.description}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/angular.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
